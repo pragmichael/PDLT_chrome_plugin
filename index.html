@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>PDLT Upwork Plugin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container mt-3" style="width: 450px;">
+        <h2 class="text-center">This is what I've read:</h2>
+        <ul class="list-group pdlt_log">
+          <li class="list-group-item">An item</li>
+        </ul>
+    </div>    
+
+    <script src="script.js" async=""></script>
+  </body>
+</html>
+
+
+
+<!--div data-v-1c326b38="" class="alerts">
+    <div data-v-1c326b38="" class="up-alert up-alert-success">
+        <div class="up-alert-icon">
+            <div class="up-icon sm"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 14 14" role="img"><polygon fill-rule="evenodd" points="11.505 1 14 2.634 5.798 14 0 9.641 1.874 7.377 5.135 9.827"></polygon></svg></div>
+        </div> 
+        <div data-test="alert-content" role="alert" class="up-alert-content break">
+            <div class="d-md-none">
+                <div class="up-line-clamp-v2-wrapper" style="--lines:3; --line-clamp-height:0px;">
+                    <div data-v-06ab5623="" tabindex="-1" class="resize-observer"></div> 
+                    <div id="up-line-clamp-v2-6" class="up-line-clamp-v2 clamped">
+                        <p data-v-1c326b38="" class="m-0">Your proposal was submitted.</p></div> 
+                    </div>
+            </div> 
+            <div class="d-none d-md-block">
+                <p data-v-1c326b38="" class="m-0">Your proposal was submitted.</p>
+            </div>
+        </div> 
+            <button type="button" class="up-btn-reset up-alert-close">
+                <span class="sr-only">Close the <> alert</span> 
+                <div class="up-icon sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 14 14" role="img"><polygon fill-rule="evenodd" points="12.524 0 7 5.524 1.476 0 0 1.476 5.524 7 0 12.524 1.476 14 7 8.476 12.524 14 14 12.524 8.476 7 14 1.476"></polygon></svg>
+                </div>
+            </button>
+    </div> 
+    
+</div-->
+
+    <div data-v-1c326b38="" class="up-alert up-alert-success">
+        <div class="up-alert-icon">
+            <div class="up-icon sm"></div>
+        </div> 
+        <div data-test="alert-content" role="alert" class="up-alert-content break">
+            <div class="d-none d-md-block">
+                <p data-v-1c326b38="" class="m-0">What template did you use?
+                <select id="templates" name="templates">
+                  <option value="stafforhourly1">stafforhourly1</option>
+                  <option value="feprop">Front-End</option>
+                  <option value="nftprop">NFT</option>
+                  <option value="tokenprop">ERC20</option>
+                  <option value="gamedevprop">gamedev</option>
+                  <option value="dApp1">dApp1</option>
+                  <option value="analytics1">Analysis tool1</option>
+                  <option value="mmbased1">Metamask-based1</option>
+                  <option value="simplegame1">Simple game1</option>
+                  <option value="dex1">DEX1</option>
+                  <option value="hithere">Main Letter</option>
+                  <option value="custom">Custom</option>
+                </select>
+                </p>
+            </div>
+        </div> 
+            <button type="button" class="up-btn-reset up-alert-close" onclick="send_template_data ()">
+                <span class="sr-only">Close the <!----> alert</span> 
+                <div class="up-icon sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 14 14" role="img"><polygon fill-rule="evenodd" points="12.524 0 7 5.524 1.476 0 0 1.476 5.524 7 0 12.524 1.476 14 7 8.476 12.524 14 14 12.524 8.476 7 14 1.476"></polygon></svg>
+                </div>
+            </button>
+    </div> 
+
+
+
+<!--
+https://www.upwork.com/nx/jobs/search/?q=%28ethereum%20OR%20p2e%20OR%20Minting%20OR%20Metamask%20OR%20%22crypto%20exchange%22%20OR%20DEX%20OR%20%22wallet%20integration%22%29&sort=recency&category2_uid=531770282580668420,531770282580668419,531770282580668418&t=0,1&contractor_tier=2,3&amount=1000-4999,5000-&hourly_rate=50-&location=Canada,United%20Kingdom,United%20States,United%20States%20Minor%20Outlying%20Islands,United%20States%20Virgin%20Islands
+
+
+https://www.upwork.com/nx/jobs/search/?category2_uid=531770282580668420,531770282580668419,531770282580668418&location=Canada,United%20Kingdom,United%20States,United%20States%20Minor%20Outlying%20Islands,United%20States%20Virgin%20Islands&q=%28blockchain%20OR%20NFT%20OR%20solidity%20OR%20web3%20OR%20dapp%29&t=0,1&amount=1000-4999,5000-&contractor_tier=2,3&hourly_rate=50-&from_recent_search=1&sort=recency
+
+
+(ethereum OR p2e OR Minting OR Metamask OR "crypto exchange" OR DEX OR "wallet integration" OR blockchain OR NFT OR solidity OR web3 OR dapp OR ERC20 OR ERC721 OR ERC1155 OR Binance OR Solana)
+
+(ethereum, p2e, Minting, Metamask, "crypto exchange", DEX, "wallet integration", blockchain, NFT, solidity, web3, dapp, ERC20, ERC721, ERC1155, Binance, Solana)
+
+
+https://www.upwork.com/nx/jobs/search/?sort=recency&or_terms=ethereum,%20p2e,%20Minting,%20Metamask,%20%22crypt&exclude_terms=%22C%2B%2B%22,%20Rust,%20%22NO%20AGENCIES%22,%20%22based%20only%22&category2_uid=531770282580668420,531770282580668419,531770282580668418&t=0,1&contractor_tier=2,3&amount=1000-4999,5000-&hourly_rate=50-&location=Canada,United%20Kingdom,United%20States,United%20States%20Minor%20Outlying%20Islands,United%20States%20Virgin%20Islands
+
+&exclude_terms=%22C%2B%2B%22,%20Rust,%20%22NO%20AGENCIES%22,%20%22based%20only%22
+
+https://www.upwork.com/nx/jobs/search/?category2_uid=531770282580668420,531770282580668419,531770282580668418&location=Canada,United%20Kingdom,United%20States,United%20States%20Minor%20Outlying%20Islands,United%20States%20Virgin%20Islands&exclude_terms=%22C%2B%2B%22,%20Rust,%20%22NO%20AGENCIES%22,%20%22based%20only%22&q=%28ethereum%20OR%20p2e%20OR%20Minting%20OR%20Metamask%20OR%20%22crypto%20exchange%22%20OR%20DEX%20OR%20%22wallet%20integration%22%20OR%20blockchain%20OR%20NFT%20OR%20solidity%20OR%20web3%20OR%20dapp%20OR%20ERC20%20OR%20ERC721%20OR%20ERC1155%20OR%20Binance%20OR%20Solana%29&t=0,1&amount=1000-4999,5000-&contractor_tier=2,3&hourly_rate=50-&sort=recency
+
+-->

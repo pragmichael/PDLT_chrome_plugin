@@ -1,0 +1,18 @@
+{
+    "name": "PDLT Upwork Plugin",
+    "version": "0.0.1",
+    "description": "The one to track stats for proposals",
+    "manifest_version": 3,
+    "author": "Michael Popchuk",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "PDLT Upwork Plugin"
+    },
+    "permissions": [],
+    "content_scripts": [
+    {
+      "matches": [ "https://www.upwork.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
