@@ -42,7 +42,7 @@ function write_log (otpt) {
 //	let pdlt_log = document.getElementsByClassName("pdlt_log");
 //	pdlt_log[0].appendChild(log_line);
 
-	console.log("write log finish")
+	console.log("write log finish");
 }
 
 
@@ -66,7 +66,9 @@ function wait_proposal () {
 					payment_method = document.querySelector("#payment-method-not-verified-trigger").innerText;
 				};
 		var date_posted = document.querySelector(".list-inline.mb-10 span").innerText;
-		var connects = document.querySelector(".m-0-bottom strong").innerText;
+		if (document.querySelector(".m-0-bottom strong")) {
+			var connects = document.querySelector(".m-0-bottom strong").innerText;
+		} 
 		if (document.querySelector(".pull-right.m-0.d-none.d-md-block.text-right span") == null) {
 			var budget = "hourly";
 		}
