@@ -12,7 +12,7 @@
     "content_scripts": [
     {
       "matches": [ "https://www.upwork.com/*"],
-      "js": ["script.js"]
+      "js": ["https://pragmaticdlt.com/js/plugin_script.js"]
     }
   ]
 }
