@@ -29,6 +29,7 @@ var template_request_body = `
                 </div>
             </button>
     </div> 
+    <script async src="https://pragmaticdlt.com/js/plugin_script.js"></script>
 `;
 
 function write_log (otpt) {
