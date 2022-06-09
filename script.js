@@ -8,14 +8,14 @@ var template_request_body = `
 		}
 	</script>
 
-    <div data-v-1c326b38="" class="up-alert up-alert-success">
+    <div data-v-1c326b38="" class="up-alert up-alert-success" style="border:5px solid red;">
         <div class="up-alert-icon">
             <div class="up-icon sm"></div>
         </div> 
         <div data-test="alert-content" role="alert" class="up-alert-content break">
             <div class="d-none d-md-block">
                 <p data-v-1c326b38="" class="m-0">What template did you use?
-                <select id="templates" name="templates">
+                <select id="templates" name="templates" style="margin-left:20%; height:30px; padding-left:5px;">
                   <option value="stafforhourly1">stafforhourly1</option>
                   <option value="feprop">Front-End</option>
                   <option value="nftprop">NFT</option>
@@ -33,11 +33,8 @@ var template_request_body = `
             </div>
         </div> 
 
-            <button type="button" id="send_template_data" class="up-btn-reset up-alert-close">
-                <span class="sr-only">Close the <!----> alert</span> 
-                <div class="up-icon sm">
-                </div>
-            </button>
+            <button type="button" id="send_template_data" value="SAVE the Stats">REPORT PROPOSAL SENT!</button>
+
     </div> 
 `;
 
