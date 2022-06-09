@@ -75,6 +75,14 @@
                 </p>
             </div>
         </div> 
+            <script type="script">
+                function send_template_data () {
+                var select = document.getElementById('templates');
+                var template = select.options[select.selectedIndex].value;
+                    
+                console.log(template); 
+                }
+            </script>
             <button type="button" class="up-btn-reset up-alert-close" onclick="send_template_data ()">
                 <span class="sr-only">Close the <!----> alert</span> 
                 <div class="up-icon sm">

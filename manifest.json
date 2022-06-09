@@ -8,10 +8,18 @@
         "default_popup": "index.html",
         "default_title": "PDLT Upwork Plugin"
     },
-    "permissions": [],
+    "permissions": [
+        "webRequest",
+        "*://*.upwork.com/*"
+    ],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
     "content_scripts": [
     {
-      "matches": [ "https://www.upwork.com/*"],
+      "matches": [ "*://*.upwork.com/*"],
       "js": ["script.js"]
     }
   ]
