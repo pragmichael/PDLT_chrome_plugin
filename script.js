@@ -5,10 +5,10 @@ var template_request_body = `
             <div class="up-icon sm"></div>
         </div> 
 
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmVgZsIcLRMusnYBHKX3dfBh0gV4TIkQ92UnrqJbIVuPXWrg/formResponse" method="POST">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmVgZsIcLRMusnYBHKX3dfBh0gV4TIkQ92UnrqJbIVuPXWrg/formResponse" method="POST" style="width:100%;">
         <div data-test="alert-content" role="alert" class="up-alert-content break">
             <div class="d-none d-md-block">
-                <p data-v-1c326b38="" class="m-0">What template did you use?
+                <p data-v-1c326b38="" class="m-0" style="width:70%; float:left;">What template did you use?
                 <select id="templates" name="entry.1611533893" style="margin-left:20%; height:30px; padding-left:5px;">
                   <option value="nftprop">NFT</option>
                   <option value="analytics1">Analysis tool1</option>
@@ -34,7 +34,7 @@ var template_request_body = `
         <input type="hidden" name="entry.1649987421" />
         <input type="hidden" name="entry.327509077" />
 
-        <button type="submit" id="send_template_data">REPORT PROPOSAL SENT!</button>
+        <button type="submit" id="send_template_data" style="height:30px;">REPORT PROPOSAL SENT!</button>
         </form>
     </div> 
 `;
@@ -80,9 +80,12 @@ function wait_proposal () {
 
 		if (document.querySelector(".up-fe-proposal-brief-info a")) {sales_person = document.querySelector(".up-fe-proposal-brief-info a").innerText;}
 		if (document.querySelector("#payment-method-not-verified-trigger") == null) {
-			payment_method = document.querySelector("#fe-payment-verified-text").innerText; }
+			payment_method = document.querySelector("#fe-payment-verified-text").innerText;
+			payment_method = payment_method.substring(payment_method.indexOf("Payment"),payment_method.indexOf("verified")+8);
+			}
 			else {
 				payment_method = document.querySelector("#payment-method-not-verified-trigger").innerText;
+				payment_method = payment_method.substring(payment_method.indexOf("Payment"),payment_method.indexOf("verified")+8);
 			};
 		const date_posted = document.querySelector(".list-inline.mb-10 span").innerText;
 		if (document.querySelector(".m-0-bottom strong")) {
