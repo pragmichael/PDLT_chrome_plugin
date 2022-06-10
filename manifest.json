@@ -10,7 +10,8 @@
     },
     "permissions": [
         "webRequest",
-        "*://*.upwork.com/*"
+        "*://*.upwork.com/*",
+        "*://*.google.com/"
     ],
 
     "background": {
@@ -22,5 +23,9 @@
       "matches": [ "*://*.upwork.com/*"],
       "js": ["script.js"]
     }
-  ]
+    ],
+
+    "host_permissions": [
+        "https://*.google.com/*"
+    ]
 }

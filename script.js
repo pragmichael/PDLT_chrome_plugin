@@ -1,40 +1,41 @@
 var template_request_body = `
-    <script type="text/javascript">
-	  function send_template_data () {
-			var select = document.getElementById('templates');
-			var template = select.options[select.selectedIndex].value;
-			
-			console.log(template); 
-		}
-	</script>
 
     <div data-v-1c326b38="" class="up-alert up-alert-success" style="border:5px solid red;">
         <div class="up-alert-icon">
             <div class="up-icon sm"></div>
         </div> 
+
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmVgZsIcLRMusnYBHKX3dfBh0gV4TIkQ92UnrqJbIVuPXWrg/formResponse" method="POST">
         <div data-test="alert-content" role="alert" class="up-alert-content break">
             <div class="d-none d-md-block">
                 <p data-v-1c326b38="" class="m-0">What template did you use?
-                <select id="templates" name="templates" style="margin-left:20%; height:30px; padding-left:5px;">
+                <select id="templates" name="entry.1611533893" style="margin-left:20%; height:30px; padding-left:5px;">
+                  <option value="nftprop">NFT</option>
+                  <option value="analytics1">Analysis tool1</option>
+                  <option value="mmbased1">Metamask-based1</option>
                   <option value="stafforhourly1">stafforhourly1</option>
                   <option value="feprop">Front-End</option>
-                  <option value="nftprop">NFT</option>
                   <option value="tokenprop">ERC20</option>
                   <option value="gamedevprop">gamedev</option>
                   <option value="dApp1">dApp1</option>
-                  <option value="analytics1">Analysis tool1</option>
-                  <option value="mmbased1">Metamask-based1</option>
                   <option value="simplegame1">Simple game1</option>
                   <option value="dex1">DEX1</option>
                   <option value="hithere">Main Letter</option>
+                  <option value="arbitragebot1">Arbitrage bot</option>
                   <option value="custom">Custom</option>
                 </select>
                 </p>
             </div>
         </div> 
+        <input type="hidden" name="entry.1960784968" />
+        <input type="hidden" name="entry.1461275940" />
+        <input type="hidden" name="entry.1634059735" />
+        <input type="hidden" name="entry.872920665" />
+        <input type="hidden" name="entry.1649987421" />
+        <input type="hidden" name="entry.327509077" />
 
-            <button type="button" id="send_template_data" value="SAVE the Stats">REPORT PROPOSAL SENT!</button>
-
+        <button type="submit" id="send_template_data">REPORT PROPOSAL SENT!</button>
+        </form>
     </div> 
 `;
 
@@ -102,31 +103,53 @@ function wait_proposal () {
 	console.log(connects);
 	console.log(budget);
 	}
-
 	console.log('wait_proposal finish');
 
 	input_template();
+
+	document.getElementsByName("entry.1960784968")[0].value = proposal_id;
+	document.getElementsByName("entry.1461275940")[0].value = sales_person;
+	document.getElementsByName("entry.1634059735")[0].value = payment_method;
+	document.getElementsByName("entry.872920665")[0].value = date_posted;
+	document.getElementsByName("entry.1649987421")[0].value = connects;
+	document.getElementsByName("entry.327509077")[0].value = budget;
 	}
 
 setTimeout(wait_proposal, 3000);
 
 
-function send_template_data () {
-	document.querySelector('#send_template_data').addEventListener("click", function () {
-       console.log('Send_template_data activated');
-    });
-	var select = document.getElementById('templates');
-	var template = select.options[select.selectedIndex].value;
+// function send_template_data () {
+// 	document.querySelector('#send_template_data').addEventListener("click", function () {
+//        console.log('Send_template_data activated');
+//     });
+// 	var select = document.getElementById('templates');
+// 	var template = select.options[select.selectedIndex].value;
 	
-	console.log(template);
-	console.log(proposal_check);
-	console.log(proposal_id);
-	console.log(sales_person); 
-	console.log(payment_method);
-	console.log(date_posted);
-	console.log(connects);
-	console.log(budget);
-}
+// 	console.log(template);
+// 	console.log(proposal_check);
+// 	console.log(proposal_id);
+// 	console.log(sales_person); 
+// 	console.log(payment_method);
+// 	console.log(date_posted);
+// 	console.log(connects);
+// 	console.log(budget);
+
+
+// 	console.log("start XHR");
+
+// 	var xhr = new XMLHttpRequest();
+// 	xhr.open("POST", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmVgZsIcLRMusnYBHKX3dfBh0gV4TIkQ92UnrqJbIVuPXWrg/formResponse", true);
+// 	xhr.setRequestHeader('Content-Type', 'application/json');
+// 	xhr.send(JSON.stringify({
+// 	    "entry.1611533893": template,
+// 	}));
+// 	xhr.onload = function() {
+// 	  console.log("XHR loaded")
+// 	  console.log(this.responseText);
+// 	  var data = JSON.parse(this.responseText);
+// 	  console.log(data);
+// 	}
+// }
 
 
 //m-0
