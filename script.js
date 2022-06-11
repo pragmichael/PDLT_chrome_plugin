@@ -33,6 +33,7 @@ var template_request_body = `
         <input type="hidden" name="entry.872920665" />
         <input type="hidden" name="entry.1649987421" />
         <input type="hidden" name="entry.327509077" />
+        <input type="hidden" name="entry.82331117" />
 
         <button type="submit" id="send_template_data" style="height:30px;">REPORT PROPOSAL SENT!</button>
         </form>
@@ -67,6 +68,7 @@ let proposal_check;
 let sales_person;
 let proposal_id;
 let date_posted;
+let request_body;
 
 function wait_proposal () {
 	console.log('wait_proposal start');
@@ -78,6 +80,8 @@ function wait_proposal () {
 				url.indexOf("?"), 
 				);
 
+		if (document.querySelector(".description")) {request_body = document.querySelector(".description").innerText;}
+
 		if (document.querySelector(".up-fe-proposal-brief-info a")) {sales_person = document.querySelector(".up-fe-proposal-brief-info a").innerText;}
 		if (document.querySelector("#payment-method-not-verified-trigger") == null) {
 			payment_method = document.querySelector("#fe-payment-verified-text").innerText;
@@ -87,7 +91,7 @@ function wait_proposal () {
 				payment_method = document.querySelector("#payment-method-not-verified-trigger").innerText;
 				payment_method = payment_method.substring(payment_method.indexOf("Payment"),payment_method.indexOf("verified")+8);
 			};
-		const date_posted = document.querySelector(".list-inline.mb-10 span").innerText;
+		date_posted = document.querySelector(".list-inline.mb-10 span").innerText;
 		if (document.querySelector(".m-0-bottom strong")) {
 			connects = document.querySelector(".m-0-bottom strong").innerText;
 		} 
@@ -116,6 +120,7 @@ function wait_proposal () {
 	document.getElementsByName("entry.872920665")[0].value = date_posted;
 	document.getElementsByName("entry.1649987421")[0].value = connects;
 	document.getElementsByName("entry.327509077")[0].value = budget;
+	document.getElementsByName("entry.82331117")[0].value = request_body;
 	}
 
 setTimeout(wait_proposal, 3000);
