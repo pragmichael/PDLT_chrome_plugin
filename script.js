@@ -34,6 +34,7 @@ var template_request_body = `
         <input type="hidden" name="entry.1649987421" />
         <input type="hidden" name="entry.327509077" />
         <input type="hidden" name="entry.82331117" />
+        <input type="hidden" name="entry.602964116" />
 
         <button type="submit" id="send_template_data" style="height:30px;">REPORT PROPOSAL SENT!</button>
         </form>
@@ -63,6 +64,7 @@ function listen_button () {
 
 let payment_method;
 let budget;
+let response;
 let connects;
 let proposal_check;
 let sales_person;
@@ -92,6 +94,9 @@ function wait_proposal () {
 				payment_method = payment_method.substring(payment_method.indexOf("Payment"),payment_method.indexOf("verified")+8);
 			};
 		date_posted = document.querySelector(".list-inline.mb-10 span").innerText;
+		if (document.querySelector("#up-truncation-2")) {
+			response = document.querySelector("#up-truncation-2").innerText;
+		} 
 		if (document.querySelector(".m-0-bottom strong")) {
 			connects = document.querySelector(".m-0-bottom strong").innerText;
 		} 
@@ -109,6 +114,7 @@ function wait_proposal () {
 	console.log(date_posted);
 	console.log(connects);
 	console.log(budget);
+	console.log(response);
 	}
 	console.log('wait_proposal finish');
 
@@ -121,6 +127,7 @@ function wait_proposal () {
 	document.getElementsByName("entry.1649987421")[0].value = connects;
 	document.getElementsByName("entry.327509077")[0].value = budget;
 	document.getElementsByName("entry.82331117")[0].value = request_body;
+	document.getElementsByName("entry.602964116")[0].value = response;
 	}
 
 setTimeout(wait_proposal, 3000);
