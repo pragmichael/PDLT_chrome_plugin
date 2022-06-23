@@ -10,7 +10,7 @@ var template_request_body = `
             <div class="d-none d-md-block">
                 <p data-v-1c326b38="" class="m-0" style="width:70%; float:left;">What template did you use?
                 <select id="templates" name="entry.1611533893" style="margin-left:20%; height:30px; padding-left:5px;">
-                  <option value="nftprop">NFT</option>
+                  <option value="nftprop2">NFT</option>
                   <option value="analytics1">Analysis tool1</option>
                   <option value="mmbased1">Metamask-based1</option>
                   <option value="stafforhourly1">stafforhourly1</option>
